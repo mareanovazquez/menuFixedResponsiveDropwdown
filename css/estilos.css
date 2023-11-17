@@ -1,0 +1,286 @@
+/* FONTS
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #2E2836;
+}
+
+section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 80vh;
+
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+}
+.seccionPrimera article {
+    background-color: red;
+}
+
+.seccionSegunda article {
+    background-color: blueviolet;
+}
+
+.seccionTercera article {
+    background-color: yellow;
+}
+
+.seccionCuarta article {
+    background-color: green;
+}
+
+.seccionQuinta article {
+    background-color: orange;
+}
+
+/*MENÚ TOGGLE CELULAR - TABLET*/
+
+header .navBar {
+    display: none;
+}
+
+header .navBarMenuCelu {
+    background-color: #BEE7E8;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+header .navBarMenuCelu .brandCelu img {
+    padding-top: 15px;
+    width: 120px;
+}
+
+header .backMenu .menuCelu {
+    display: none;
+}
+
+header .navBarMenuCelu #toggle {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    padding: 12px;
+    background-color: #BEE7E8;
+}
+
+header .navBarMenuCelu #toggle div {
+    width: 100%;
+    height: 5px;
+    background: #2E2836;
+    margin: 4px auto;
+    transition: all 0.3s ease-in-out;
+    backface-visibility: hidden;
+    z-index: 9999;
+    position: sticky;
+}
+
+header .navBarMenuCelu .on .one {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.5s;
+}
+
+header .navBarMenuCelu .on .two {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+header .navBarMenuCelu .on .three {
+    transform: rotate(-45deg) translate(7px, -8px);
+    transition: 0.5s;
+}
+
+/* estilos MENÚ CELULAR*/
+
+header .backMenu .menuShow {
+    background-color: #BEE7E8;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    padding: 10px;
+    font-family: 'Roboto Slab', serif;;
+    line-height: 80px;
+    text-align: left;
+    display: flex;
+    z-index: 99999;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    }
+
+
+header .backMenu .itemMenuCelu {
+    text-decoration: none;
+    font-size: 20px;
+    color: #2E2836;
+}
+
+header .backMenu .menuCelu .opcionesMenuCelu {
+    display: none;
+}
+
+header .backMenu .menuCelu .subMenuCeluDesplegado {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding-left: 50px;
+    font-size: 16px;
+    list-style: none;
+}
+
+.itemSubmenuCelu a {
+    color: #2E2836;
+    text-decoration: none;
+}
+
+.itemSubmenuCelu a:hover {
+    color: gray;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+
+.opciones {
+    display: none;
+}
+
+header .backMenu .navBarRRSS {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+header .backMenu .navBarRRSS .itemMenuRRSS {
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif; ;
+    color: #2E2836;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 40px;
+}
+
+header .backMenu .navBarRRSS .itemMenuRRSS:hover {
+    color: grey;
+    transition: 0.2s;
+    padding: 20px;
+}
+
+
+
+
+@media(min-width: 992px) {
+
+    header .navBarMenuCelu {
+        display: none;
+    }
+
+    header .navBarMenuCelu .backMenu .navBarRRSS {
+        display: none;
+    }
+
+    header .navBar {
+        background-color: #BEE7E8;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        position: fixed;
+        top: 0;
+        left: 5%;
+
+    }
+
+    header .navBar .brand {
+        display: inline-flex;
+    }
+
+    header .navBar .brand img {
+        width: 120px;
+        padding-left: 20px;
+
+    }
+
+    header .navBar .itemMenu {
+        display: inline-block;
+        padding-right: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        text-decoration: none;
+        color: #2E2836;
+    }
+
+    header .navBar .itemMenu:hover {
+        color: #2E2836;
+        font-weight: 700;
+        transition: 0.2s;
+    }
+
+    .backMenu .menuShow {
+        display: none;
+    }
+
+    .menuPrimera ul {
+        display: none;
+    }
+
+    .menuPrimera .menuDesplegado {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+        background-color: #BEE7E8;
+        list-style: none;
+        padding: 10px;
+        z-index: 9999;
+        position: absolute;
+        padding-top: 25px;
+        text-align: left;
+        border-radius: 5px;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .menuDesplegado a {
+        font-family: 'Roboto Slab', serif;
+        padding-bottom: 18px;
+        text-decoration: none;
+        color: #2E2836;
+        font-size: 15px;
+    }
+
+    .menuDesplegado a:hover {
+        color: grey;
+        transition: 0.3s;
+    }
+}
