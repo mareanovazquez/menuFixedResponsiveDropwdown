@@ -1,12 +1,11 @@
 const menuToggle = document.getElementById('toggle');
-const menuShow = document.getElementById('menu');
-const menuItems = document.querySelectorAll(".itemMenuCelu");
+const menuShow = document.getElementById('menuMobile');
+const menuItems = document.querySelectorAll(".itemMenuMobile");
 const menuItemsRRSS = document.querySelectorAll(".itemMenuRRSS")
 
 function deployMenu() {
     menuToggle.classList.toggle('on');
     menuShow.classList.toggle('menuShow');
-
 }
 
 function closeMenu() {

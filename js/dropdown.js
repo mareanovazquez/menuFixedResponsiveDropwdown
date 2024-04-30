@@ -1,7 +1,7 @@
 const inicioDropdown = document.getElementById("inicio-dropdown-desktop");
 const menuDesplegado = document.getElementById("menuDesplegado");
-const inicioMenuCelu = document.getElementById('inicioMenuCelu');
-const subMenuCelu = document.getElementById('menuCeluDesplegado');
+const inicioDropdownMobile = document.getElementById('inicio-dropdown-mobile');
+const menuDesplegadoMobile = document.getElementById('menuDesplegadoMobile');
 const seleccionInicio = document.querySelectorAll('.seleccion');
 
 /* FUNCIONES DROPDOWN INICIO DESKTOP */
@@ -28,14 +28,14 @@ window.addEventListener('keydown', (event) => {
 /* FUNCIONES DROPDOWN INICIO MOBILE */
 
 function deploySubMenuInicio() {
-    subMenuCelu.classList.toggle('subMenuCeluDesplegado');
+    menuDesplegadoMobile.classList.toggle('subMenuCeluDesplegado');
 }
 
 function retraerSubMenuInicio() {
     let menuToggle = document.getElementById('toggle');
-    let menuShow = document.getElementById('menu');
+    let menuShow = document.getElementById('menuMobile');
 
-    subMenuCelu.classList.remove('subMenuCeluDesplegado');
+    menuDesplegadoMobile.classList.remove('subMenuCeluDesplegado');
     menuToggle.classList.remove('on');
     menuShow.classList.remove('menuShow');
 }
@@ -44,16 +44,16 @@ function cerrarMenu(event) {
     let cerrar = event.key;
     if (cerrar == 'Escape') {
         let menuToggle = document.getElementById('toggle');
-        let menuShow = document.getElementById('menu');
+        let menuShow = document.getElementById('menuMobile');
 
-        subMenuCelu.classList.remove('subMenuCeluDesplegado');
+        menuDesplegadoMobile.classList.remove('subMenuCeluDesplegado');
         menuToggle.classList.remove('on');
         menuShow.classList.remove('menuShow');
     }
 }
 
 
-inicioMenuCelu.addEventListener("mouseover", deploySubMenuInicio);
+inicioDropdownMobile.addEventListener("mouseover", deploySubMenuInicio);
 
 // Agrega evento click a los elementos del submenú
 const itemsSubmenu = document.querySelectorAll('.itemSubmenuCelu');

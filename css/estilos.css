@@ -61,8 +61,8 @@ header .navBar {
     display: none;
 }
 
-header .navBarMenuCelu {
-    background-color: #BEE7E8;
+header .navBarMobile {
+    background-color: #FED766;
     width: 100%;
     height: 50px;
     position: fixed;
@@ -72,47 +72,51 @@ header .navBarMenuCelu {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;        animation: slideDown 0.7s ease;
+
 } 
 
-header .navBarMenuCelu .brandCelu img {
+header .navBarMobile .brandMobile img {
     padding-top: 15px;
     width: 120px;
 }
 
-header .backMenu .menuCelu {
+header .backMenu .menuMobile {
     display: none;
 }
 
-header .navBarMenuCelu #toggle {
-    width: 30px;
+header .navBarMobile #toggle {
+    width: 35px;
     height: 30px;
     margin-left: auto;
+    margin-top: 10px;
     padding: 12px;
-    background-color: #BEE7E8;
+    background-color: #FED766;
 }
 
-header .navBarMenuCelu #toggle div {
+header .navBarMobile #toggle div {
     width: 100%;
     height: 5px;
-    background: #2E2836;
+    background: #009FB7;
     margin: 4px auto;
     transition: all 0.3s ease-in-out;
     backface-visibility: hidden;
     z-index: 9999;
     position: sticky;
+    border-radius: 5px;
 }
 
-header .navBarMenuCelu .on .one {
+header .navBarMobile .on .one {
     transform: rotate(45deg) translate(5px, 5px);
     transition: 0.5s;
 }
 
-header .navBarMenuCelu .on .two {
+header .navBarMobile .on .two {
     opacity: 0;
     transition: 0.5s;
 }
 
-header .navBarMenuCelu .on .three {
+header .navBarMobile .on .three {
     transform: rotate(-45deg) translate(7px, -8px);
     transition: 0.5s;
 }
@@ -120,7 +124,7 @@ header .navBarMenuCelu .on .three {
 /* estilos MENÚ CELULAR*/
 
 header .backMenu .menuShow {
-    background-color: #BEE7E8;
+    background-color: #FED766;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -138,17 +142,22 @@ header .backMenu .menuShow {
     }
 
 
-header .backMenu .itemMenuCelu {
+header .backMenu .itemMenuMobile {
     text-decoration: none;
     font-size: 20px;
     color: #2E2836;
 }
 
-header .backMenu .menuCelu .opcionesMenuCelu {
+header .backMenu .itemMenuMobile:hover {
+    color: #EFF1F3;
+    transition: 0.2s;
+}
+
+header .backMenu .menuMobile .opcionesMobile {
     display: none;
 }
 
-header .backMenu .menuCelu .subMenuCeluDesplegado {
+header .backMenu .menuMobile .subMenuCeluDesplegado {
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -163,8 +172,7 @@ header .backMenu .menuCelu .subMenuCeluDesplegado {
 }
 
 .itemSubmenuCelu a:hover {
-    color: gray;
-    font-weight: 600;
+    color: #EFF1F3;
     transition: 0.2s;
 }
 
@@ -190,21 +198,20 @@ header .backMenu .navBarRRSS .itemMenuRRSS {
 }
 
 header .backMenu .navBarRRSS .itemMenuRRSS:hover {
-    color: grey;
+    color: #EFF1F3;
     transition: 0.2s;
     padding: 20px;
 }
 
 
 
-
 @media(min-width: 992px) {
 
-    header .navBarMenuCelu {
+    header .navBarMobile {
         display: none;
     }
 
-    header .navBarMenuCelu .backMenu .navBarRRSS {
+    header .navBarMobile .backMenu .navBarRRSS {
         display: none;
         
     }
