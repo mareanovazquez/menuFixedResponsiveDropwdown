@@ -7,32 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/31ff4c85db.js" crossorigin="anonymous"></script>
     <title>Menú dropdown responsivo</title>
 </head>
 
 <body>
     <header>
-        <nav class="navBar">
-            <div class="brand"> <img src="./img/marcaFondoTransp.png" alt=""></div>
-            <div class="menuPrimera" id="primera">
-                <a class="itemMenu"> INICIO</a>
+        <nav class="navBar" id="navBar">
+            <div class="brand"> <a href="#seccionPrimera"><img src="./img/Marca.svg" alt=""></a></div>
+            <div class="menuDesktop" id="menuDesktop">
+                <a class="itemMenu" id="inicio-dropdown-desktop"> INICIO</a>
                 <ul class="opciones" id="menuDesplegado">
-                    <li  class="seleccion"><a href="#nosotros">NOSOTROS</a></li>
-                    <li  class="seleccion"><a href="#equipo">EQUIPO</a></li>
-                    <li  class="seleccion"><a href="#nuestraHistoria">NUESTRA HISTORIA</a>
-                    </li>
-                    <li  class="seleccion"><a href="#contacto">CONTACTO</a></li>
+                    <li class="seleccion"><a href="#nosotros">Nosotros</a></li>
+                    <li class="seleccion"><a href="#equipo">Equipo</a></li>
+                    <li class="seleccion"><a href="#nuestraHistoria">Nuestra historia</a></li>
+                    <li class="seleccion"><a href="#contacto">Contacto</a></li>
                 </ul>
+                <a class="itemMenu"> CLIENTES</a>
+                <a class="itemMenu"> PROYECTOS</a>
+                <a class="itemMenu">NOTICIAS </a>
+                <a href="#contacto" class="itemMenu">CONTACTO</a>
             </div>
-            <div><a class="itemMenu"> CLIENTES</a></div>
-            <div><a class="itemMenu"> PROYECTOS</a></div>
-            <div><a class="itemMenu">NOTICIAS </a></div>
-            <div><a href="#contacto" class="itemMenu">CONTACTO</a></div>
         </nav>
         <nav class="navBarMenuCelu">
             <div class="brandCelu"> <img src="./img/marcaFondoTransp.png" alt=""></div>
@@ -48,10 +45,8 @@
                     <ul class="opcionesMenuCelu" id="menuCeluDesplegado">
                         <li class="itemSubmenuCelu"><a href="#nosotros">NOSOTROS</a>
                         </li>
-                        <li class="itemSubmenuCelu"><a
-                                href="#equipo">EQUIPO</a></li>
-                        <li class="itemSubmenuCelu"><a
-                                href="#nuestraHistoria">NUESTRA HISTORIA</a></li>
+                        <li class="itemSubmenuCelu"><a href="#equipo">EQUIPO</a></li>
+                        <li class="itemSubmenuCelu"><a href="#nuestraHistoria">NUESTRA HISTORIA</a></li>
                         <li class="itemSubmenuCelu"><a href="#contacto">CONTACTO</a>
                         </li>
                     </ul>
@@ -101,6 +96,7 @@
     </section>
     <script src="./js/menuToggle.js"></script>
     <script src="./js/dropdown.js"></script>
+    <script src="./js/fixedNavBar.js"></script>
 </body>
 
 </html>
