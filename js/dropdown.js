@@ -20,8 +20,14 @@ seleccionInicio.forEach(function(item) {
 });
 
 window.addEventListener('keydown', (event) => {
+    let menuToggle = document.getElementById('toggle');
+    let menuShow = document.getElementById('menuMobile');
+
     if (event.code === 'Escape') {
         menuDesplegado.classList.remove('menuDesplegado');
+        menuDesplegadoMobile.classList.remove('subMenuCeluDesplegado');
+        menuToggle.classList.remove('on');
+        menuShow.classList.remove('menuShow');
     }
 });
 
@@ -31,37 +37,21 @@ function deploySubMenuInicio() {
     menuDesplegadoMobile.classList.toggle('subMenuCeluDesplegado');
 }
 
-function retraerSubMenuInicio() {
-    let menuToggle = document.getElementById('toggle');
-    let menuShow = document.getElementById('menuMobile');
-
-    menuDesplegadoMobile.classList.remove('subMenuCeluDesplegado');
-    menuToggle.classList.remove('on');
-    menuShow.classList.remove('menuShow');
-}
-
-function cerrarMenu(event) {
-    let cerrar = event.key;
-    if (cerrar == 'Escape') {
-        let menuToggle = document.getElementById('toggle');
-        let menuShow = document.getElementById('menuMobile');
-
-        menuDesplegadoMobile.classList.remove('subMenuCeluDesplegado');
-        menuToggle.classList.remove('on');
-        menuShow.classList.remove('menuShow');
-    }
-}
-
 
 inicioDropdownMobile.addEventListener("mouseover", deploySubMenuInicio);
+
 
 // Agrega evento click a los elementos del submenú
 const itemsSubmenu = document.querySelectorAll('.itemSubmenuCelu');
 itemsSubmenu.forEach(item => {
     item.addEventListener('click', function () {
-        cerrarMenu({ key: 'Escape' }); // Llama a cerrarMenu al hacer clic en un elemento del submenú
+        menuDesplegadoMobile.classList.remove('subMenuCeluDesplegado');
+        menuToggle.classList.remove('on');
+        menuShow.classList.remove('menuShow');
     });
 });
 
-window.addEventListener("keydown", cerrarMenu);
+
+
+
 
