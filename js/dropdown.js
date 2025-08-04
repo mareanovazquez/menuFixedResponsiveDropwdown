@@ -22,12 +22,14 @@ seleccionInicio.forEach(function(item) {
 window.addEventListener('keydown', (event) => {
     let menuToggle = document.getElementById('toggle');
     let menuShow = document.getElementById('menuMobile');
+    let navBarMobile = document.querySelector('.navBarMobile'); // Agregar selección del navbar
 
     if (event.code === 'Escape') {
         menuDesplegado.classList.remove('menuDesplegado');
         menuDesplegadoMobile.classList.remove('subMenuCeluDesplegado');
         menuToggle.classList.remove('on');
         menuShow.classList.remove('menuShow');
+        navBarMobile.classList.remove('menu-open'); // Agregar esta línea
     }
 });
 
@@ -37,21 +39,19 @@ function deploySubMenuInicio() {
     menuDesplegadoMobile.classList.toggle('subMenuCeluDesplegado');
 }
 
-
 inicioDropdownMobile.addEventListener("mouseover", deploySubMenuInicio);
-
 
 // Agrega evento click a los elementos del submenú
 const itemsSubmenu = document.querySelectorAll('.itemSubmenuCelu');
 itemsSubmenu.forEach(item => {
     item.addEventListener('click', function () {
+        let menuToggle = document.getElementById('toggle');
+        let menuShow = document.getElementById('menuMobile');
+        let navBarMobile = document.querySelector('.navBarMobile'); // Agregar selección del navbar
+        
         menuDesplegadoMobile.classList.remove('subMenuCeluDesplegado');
         menuToggle.classList.remove('on');
         menuShow.classList.remove('menuShow');
+        navBarMobile.classList.remove('menu-open'); // Agregar esta línea
     });
 });
-
-
-
-
-
