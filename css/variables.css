@@ -1,0 +1,84 @@
+:root {
+    /* Colores principales */
+    --color-raisin-black: #272727;
+    --color-dim-gray: #696773;
+    --color-mustard: #FED766;
+    --color-moonstone: #009FB7;
+    --color-anti-flash-white: #EFF1F3;
+
+    /* Variantes de Moonstone */
+    --color-moonstone-100: #C1EDF4;
+    --color-moonstone-200: #82DFED;
+    --color-moonstone-300: #49D6EB;
+    --color-moonstone-400: #15D2EE;
+    --color-moonstone-500: #08B8D2;
+    --color-moonstone-600: #009FB7;
+    /* Color principal */
+    --color-moonstone-700: #057D8F;
+    --color-moonstone-800: #086270;
+    --color-moonstone-900: #0A4D58;
+    --color-moonstone-1000: #0A3D45;
+    --color-moonstone-1100: #0A3036;
+    --color-moonstone-1200: #09262B;
+
+    /* Variantes de Mustard */
+    --color-mustard-100: #FFFDFA;
+    --color-mustard-200: #FBE7AC;
+    --color-mustard-300: #FED766;
+    /* Color principal */
+    --color-mustard-400: #F6C22A;
+    --color-mustard-500: #D8A511;
+    --color-mustard-600: #AA8313;
+    --color-mustard-700: #856814;
+    --color-mustard-800: #695313;
+    --color-mustard-900: #524212;
+
+    /* Variantes de Raisin Black */
+    --color-raisin-100: #6F6F6F;
+    --color-raisin-200: #5D5D5D;
+    --color-raisin-300: #4E4E4E;
+    --color-raisin-400: #424242;
+    --color-raisin-500: #373737;
+    --color-raisin-600: #2E2E2E;
+    --color-raisin-700: #272727;
+    /* Color principal */
+    --color-raisin-800: #202020;
+    --color-raisin-900: #1A1A1A;
+    --color-raisin-1000: #151515;
+    --color-raisin-1100: #111111;
+    --color-raisin-1200: #0E0E0E;
+    --color-raisin-1300: #0B0B0B;
+
+    /* Otros colores encontrados en estilos.css */
+    --color-dark-gray: #2E2836;
+
+    /* Tipografías */
+    --font-primary: "Manrope", sans-serif;
+    --font-secondary: "Urbanist", sans-serif;
+
+    /* Tamaños de fuente */
+    --font-size-small: 15px;
+    --font-size-normal: 16px;
+    --font-size-medium: 20px;
+    --font-size-large: 40px;
+    --font-size-xlarge: 50px;
+
+    /* Bordes y radios */
+    --border-radius-small: 5px;
+    --border-radius-medium: 15px;
+
+    /* Sombras */
+    --shadow-default: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    --shadow-dropdown: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+
+    /* Transiciones */
+    --transition-fast: 0.2s;
+    --transition-medium: 0.3s;
+    --transition-slow: 0.5s;
+    --transition-slide: 0.7s ease;
+
+    /* Espaciados */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 50px;
+}

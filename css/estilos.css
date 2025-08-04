@@ -1,4 +1,7 @@
 
+/* Importar el archivo de variables */
+@import url("variables.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +12,14 @@ html {
 }
 
 body {
-    font-family: "Manrope", sans-serif;
-    color: #272727;
-    background-color: #EFF1F3 ;
+    font-family: var(--font-primary);
+    color: var(--color-raisin-black);
+    background-color: var(--color-anti-flash-white);
 }
 
 section {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
 }
 
 article {
@@ -26,33 +29,33 @@ article {
     width: 80%;
     margin: 0 auto;
     height: 80vh;
-    color: #EFF1F3;
-    border-radius:15px;
-
+    color: var(--color-anti-flash-white);
+    border-radius: var(--border-radius-medium);
 }
 
 h2 {
-    font-size: 50px;
+    font-size: var(--font-size-xlarge);
     text-align: center;
 }
+
 .seccionPrimera article {
-    background-color:#009FB7;
+    background-color: var(--color-moonstone);
 }
 
 .seccionSegunda article {
-    background-color: #057D8F;
+    background-color: var(--color-moonstone-700);
 }
 
 .seccionTercera article {
-    background-color:#086270;
+    background-color: var(--color-moonstone-800);
 }
 
 .seccionCuarta article {
-    background-color: #0A4D58;
+    background-color: var(--color-moonstone-900);
 }
 
 .seccionQuinta article {
-    background-color: #0A3D45;
+    background-color: var(--color-moonstone-1000);
 }
 
 /*MENÚ TOGGLE CELULAR - TABLET*/
@@ -62,18 +65,18 @@ header .navBar {
 }
 
 header .navBarMobile {
-    background-color: #FED766;
+    background-color: var(--color-mustard);
     width: 100%;
     height: 50px;
     position: fixed;
     top: 0;
-    padding-bottom: 20px;
+    padding-bottom: var(--spacing-medium);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;        animation: slideDown 0.7s ease;
-
+    box-shadow: var(--shadow-default);
+    animation: slideDown var(--transition-slide);
 } 
 
 header .navBarMobile .brandMobile img {
@@ -89,48 +92,48 @@ header .navBarMobile #toggle {
     width: 35px;
     height: 30px;
     margin-left: auto;
-    margin-top: 10px;
+    margin-top: var(--spacing-small);
     padding: 12px;
-    background-color: #FED766;
+    background-color: var(--color-mustard);
 }
 
 header .navBarMobile #toggle div {
     width: 100%;
     height: 5px;
-    background: #009FB7;
+    background: var(--color-moonstone);
     margin: 4px auto;
-    transition: all 0.3s ease-in-out;
+    transition: all var(--transition-medium) ease-in-out;
     backface-visibility: hidden;
     z-index: 9999;
     position: sticky;
-    border-radius: 5px;
+    border-radius: var(--border-radius-small);
 }
 
 header .navBarMobile .on .one {
     transform: rotate(45deg) translate(5px, 5px);
-    transition: 0.5s;
+    transition: var(--transition-slow);
 }
 
 header .navBarMobile .on .two {
     opacity: 0;
-    transition: 0.5s;
+    transition: var(--transition-slow);
 }
 
 header .navBarMobile .on .three {
     transform: rotate(-45deg) translate(7px, -8px);
-    transition: 0.5s;
+    transition: var(--transition-slow);
 }
 
 /* estilos MENÚ CELULAR*/
 
 header .backMenu .menuShow {
-    background-color: #FED766;
+    background-color: var(--color-mustard);
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     height: 100vh;
-    padding: 10px;
-    font-family: "Urbanist", sans-serif;
+    padding: var(--spacing-small);
+    font-family: var(--font-secondary);
     font-weight: 800;
     line-height: 80px;
     text-align: left;
@@ -139,18 +142,17 @@ header .backMenu .menuShow {
     flex-direction: column;
     position: fixed;
     top: 60px;
-    }
-
+}
 
 header .backMenu .itemMenuMobile {
     text-decoration: none;
-    font-size: 20px;
-    color: #2E2836;
+    font-size: var(--font-size-medium);
+    color: var(--color-dark-gray);
 }
 
 header .backMenu .itemMenuMobile:hover {
-    color: #EFF1F3;
-    transition: 0.2s;
+    color: var(--color-anti-flash-white);
+    transition: var(--transition-fast);
 }
 
 header .backMenu .menuMobile .opcionesMobile {
@@ -162,20 +164,19 @@ header .backMenu .menuMobile .subMenuCeluDesplegado {
     flex-direction: column;
     text-decoration: none;
     padding-left: 50px;
-    font-size: 16px;
+    font-size: var(--font-size-normal);
     list-style: none;
 }
 
 .itemSubmenuCelu a {
-    color: #2E2836;
+    color: var(--color-dark-gray);
     text-decoration: none;
 }
 
 .itemSubmenuCelu a:hover {
-    color: #EFF1F3;
-    transition: 0.2s;
+    color: var(--color-anti-flash-white);
+    transition: var(--transition-fast);
 }
-
 
 .opciones {
     display: none;
@@ -185,39 +186,35 @@ header .backMenu .navBarRRSS {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding: 20px;
+    padding: var(--spacing-medium);
 }
 
 header .backMenu .navBarRRSS .itemMenuRRSS {
     text-decoration: none;
-    font-family: "Manrope", sans-serif;
-    color: #2E2836;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 40px;
+    font-family: var(--font-primary);
+    color: var(--color-dark-gray);
+    padding-left: var(--spacing-medium);
+    padding-right: var(--spacing-medium);
+    font-size: var(--font-size-large);
 }
 
 header .backMenu .navBarRRSS .itemMenuRRSS:hover {
-    color: #EFF1F3;
-    transition: 0.2s;
-    padding: 20px;
+    color: var(--color-anti-flash-white);
+    transition: var(--transition-fast);
+    padding: var(--spacing-medium);
 }
 
-
-
 @media(min-width: 992px) {
-
     header .navBarMobile {
         display: none;
     }
 
     header .navBarMobile .backMenu .navBarRRSS {
         display: none;
-        
     }
 
     header .navBar {
-        background-color: #FED766;
+        background-color: var(--color-mustard);
         height: 60px;
         display: flex;
         justify-content: space-between;
@@ -225,9 +222,9 @@ header .backMenu .navBarRRSS .itemMenuRRSS:hover {
         width: 80%;
         margin-left: auto;
         margin-right: auto;       
-        margin-top: 10px;
-        border-radius: 15px;
-        font-family: "Manrope", sans-serif;
+        margin-top: var(--spacing-small);
+        border-radius: var(--border-radius-medium);
+        font-family: var(--font-primary);
     }
 
     header .navBar.fixed {
@@ -235,9 +232,10 @@ header .backMenu .navBarRRSS .itemMenuRRSS:hover {
         width: 90%;
         top: 0%;
         right: 5%;
-        background-color: #FED766;
+        background-color: var(--color-mustard);
         z-index: 4444;
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;        animation: slideDown 0.7s ease;
+        box-shadow: var(--shadow-default);
+        animation: slideDown var(--transition-slide);
     }
 
     header .navBar .brand {
@@ -246,24 +244,23 @@ header .backMenu .navBarRRSS .itemMenuRRSS:hover {
 
     header .navBar .brand img {
         width: 120px;
-        padding-left: 20px;
-
+        padding-left: var(--spacing-medium);
     }
 
     header .navBar .itemMenu {
         display: inline-block;
-        padding-right: 10px;
-        font-family: "Urbanist", sans-serif;
+        padding-right: var(--spacing-small);
+        font-family: var(--font-secondary);
         font-weight: 800;
-        font-size: 16px;
+        font-size: var(--font-size-normal);
         text-decoration: none;
-        color: #2E2836;
+        color: var(--color-dark-gray);
     }
 
     header .navBar .itemMenu:hover {
-        color: #EFF1F3;
+        color: var(--color-anti-flash-white);
         font-weight: 800;
-        transition: 0.2s;
+        transition: var(--transition-fast);
     }
 
     .backMenu .menuShow {
@@ -278,38 +275,38 @@ header .backMenu .navBarRRSS .itemMenuRRSS:hover {
         display: flex;
         flex-direction: column;
         width: 15%;
-        background-color: #F6C22A;
+        background-color: var(--color-mustard-400);
         list-style: none;
-        padding: 10px;
+        padding: var(--spacing-small);
         z-index: 9999;
         position: absolute;
         padding-top: 25px;
         text-align: left;
-        border-radius: 5px;
-        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+        border-radius: var(--border-radius-small);
+        box-shadow: var(--shadow-dropdown);
     }
 
     .menuDesplegado a {
-        font-family: "Manrope", sans-serif;
+        font-family: var(--font-primary);
         font-weight: 800;
         padding-bottom: 18px;
         text-decoration: none;
-        color: #2E2836;
-        font-size: 15px;
+        color: var(--color-dark-gray);
+        font-size: var(--font-size-small);
     }
 
     .menuDesplegado a:hover {
-        color: #EFF1F3;
-        transition: 0.3s;
+        color: var(--color-anti-flash-white);
+        transition: var(--transition-medium);
     }
 }
 
 @keyframes slideDown {
-        from {
-            transform: translateY(-100%);
-        }
-
-        to {
-            transform: translateY(0);
-        }
+    from {
+        transform: translateY(-100%);
     }
+
+    to {
+        transform: translateY(0);
+    }
+}
