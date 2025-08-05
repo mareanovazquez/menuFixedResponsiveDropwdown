@@ -54,20 +54,28 @@ window.addEventListener('keydown', (event) => {
 
 /* FUNCIONES DROPDOWN INICIO MOBILE - Sin cambios */
 function deploySubMenuInicio() {
+    const inicioButton = document.getElementById('inicio-dropdown-mobile');
+
     menuDesplegadoMobile.classList.toggle('subMenuCeluDesplegado');
+
+    // Agregar/quitar clase para el indicador visual
+    inicioButton.classList.toggle('menu-open');
 }
 
 inicioDropdownMobile.addEventListener("click", deploySubMenuInicio);
 
 // Agrega evento click a los elementos del submenú
 const itemsSubmenu = document.querySelectorAll('.itemSubmenuCelu');
+// Y en el cierre del submenú:
 itemsSubmenu.forEach(item => {
     item.addEventListener('click', function () {
         let menuToggle = document.getElementById('toggle');
         let menuShow = document.getElementById('menuMobile');
         let navBarMobile = document.querySelector('.navBarMobile');
-
+        let inicioButton = document.getElementById('inicio-dropdown-mobile');
+        
         menuDesplegadoMobile.classList.remove('subMenuCeluDesplegado');
+        inicioButton.classList.remove('menu-open'); // ← Agregar esta línea
         menuToggle.classList.remove('on');
         menuShow.classList.remove('menuShow');
         navBarMobile.classList.remove('menu-open');
