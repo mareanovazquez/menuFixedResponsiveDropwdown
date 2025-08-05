@@ -17,7 +17,7 @@ function retractDropdownInicio() {
     // Agregar un pequeño delay para mejor UX
     dropdownTimeout = setTimeout(() => {
         menuDesplegado.classList.remove('menuDesplegado');
-    }, 150);
+    }, 200);
 }
 
 // Eventos para el dropdown desktop
@@ -31,7 +31,7 @@ menuDesplegado.addEventListener("mouseenter", () => {
 menuDesplegado.addEventListener("mouseleave", retractDropdownInicio);
 
 // Cerrar dropdown al hacer click en una opción
-seleccionInicio.forEach(function(item) {
+seleccionInicio.forEach(function (item) {
     item.addEventListener('click', () => {
         menuDesplegado.classList.remove('menuDesplegado');
     });
@@ -44,11 +44,11 @@ window.addEventListener('keydown', (event) => {
     let navBarMobile = document.querySelector('.navBarMobile');
 
     if (event.code === 'Escape') {
-        menuDesplegado.classList.remove('menuDesplegado');
-        menuDesplegadoMobile.classList.remove('subMenuCeluDesplegado');
-        menuToggle.classList.remove('on');
-        menuShow.classList.remove('menuShow');
-        navBarMobile.classList.remove('menu-open');
+        retractDropdownInicio(); // Cerrar dropdown desktop
+        menuDesplegadoMobile.classList.remove('subMenuCeluDesplegado'); // Cerrar submenu mobile
+        menuToggle.classList.remove('on'); // Cerrar menú mobile
+        menuShow.classList.remove('menuShow'); // Cerrar menú mobile
+        navBarMobile.classList.remove('menu-open'); // Quitar sombra del navbar mobile
     }
 });
 
@@ -66,7 +66,7 @@ itemsSubmenu.forEach(item => {
         let menuToggle = document.getElementById('toggle');
         let menuShow = document.getElementById('menuMobile');
         let navBarMobile = document.querySelector('.navBarMobile');
-        
+
         menuDesplegadoMobile.classList.remove('subMenuCeluDesplegado');
         menuToggle.classList.remove('on');
         menuShow.classList.remove('menuShow');
@@ -78,7 +78,7 @@ itemsSubmenu.forEach(item => {
 document.addEventListener('click', (event) => {
     const isClickInsideDropdown = menuDesplegado.contains(event.target);
     const isClickOnTrigger = inicioDropdown.contains(event.target);
-    
+
     if (!isClickInsideDropdown && !isClickOnTrigger) {
         menuDesplegado.classList.remove('menuDesplegado');
     }
