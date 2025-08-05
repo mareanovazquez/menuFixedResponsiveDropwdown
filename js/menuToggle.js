@@ -9,7 +9,7 @@ let menuItemsRRSS = document.querySelectorAll('.itemMenuRRSS');
 function toggleMenu() {
     menuToggle.classList.toggle('on');
     menuShow.classList.toggle('menuShow');
-    
+
     // Agregar/quitar clase para el box-shadow
     navBarMobile.classList.toggle('menu-open');
 }
@@ -24,7 +24,11 @@ menuToggle.addEventListener('click', toggleMenu);
 
 // Agrega un controlador de eventos a cada elemento del menú para cerrar el menú cuando se hace clic
 menuItems.forEach(item => {
-    item.addEventListener("click", closeMenu);
+
+    item.addEventListener("click", function (e) {
+        if (item.id === "inicio-dropdown-mobile") return;
+        closeMenu();
+    });
 });
 
 menuItemsRRSS.forEach(item => {
